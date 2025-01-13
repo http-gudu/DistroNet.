@@ -1,0 +1,210 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+  display: none; 
+}
+section{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+#canvas{
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, rgb(1, 1, 67) 10%, black 80%);
+}
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    padding: 20px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .navbar .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+
+  .navbar .nav-links {
+    display: flex;
+    gap: 25px;
+  }
+
+  .navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 3.5vh;
+    transition: color 0.3s ease;
+  }
+
+  .navbar .nav-links a:hover {
+    color: #00bfff; /* Light blue hover effect */
+  }
+
+ /* maintext */
+ .maintext {
+    color: white;
+    text-align: left;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: flex-start; /* Align to the left */
+    height: 80vh; /* Full viewport height to center vertically */
+    padding-left: 120px; /* Horizontal padding to control left alignment */
+}
+
+.maintext .h1 {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.maintext .h1 a {
+    font-size: 15vh; /* Increase h1 size */
+    line-height: 1.1; /* Adjust line height to reduce space between lines */
+    margin: 0; /* Remove default margin for h1 */
+}
+
+.maintext .h4 a {
+    font-size: 2vh; /* Increase h4 size */
+    margin-top: 0; /* Remove margin-top to reduce gap from h1 */
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+/* cursur */
+
+.cursor, .cursor1, .cursor2{
+    height: 5px;
+    width: 5px;
+    background-color: rgb(250, 250, 250);
+    border-radius: 50%;
+    position: fixed;
+}
+.cursor1{
+  background-color: #00bfff90;
+}
+.cursor2{
+  background-color: #00bfff;
+}
+
+/* second page start here */
+
+
+
+section2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #000000;
+    overflow: hidden;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+
+  section2 nav {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    color: white;
+    padding: 5vh 10vh;
+    margin: 0 auto;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    border-radius: 10px;
+  }
+  
+  .about, .second, .forth {
+    align-items: flex-start;
+    margin-left: 20vh;
+  }
+  
+  .first, .third, .fifth {
+    align-items: flex-end;
+    margin-right: 20vh;
+  }
+  
+  nav h1 {
+    font-size: 10vh;
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  nav h1:hover{
+    color: #00bfff;
+  }
+  
+  nav a {
+    font-size: 3vh;
+    margin-top: 1rem;
+  }
+  nav #video-container {
+    position: absolute;
+    top: 95%;
+    right: 5%;
+    width: 40%;
+    height: auto;
+    display: none; /* Initially hidden */
+    /* border-radius: 10px; */
+    clip-path: ellipse(80% 80% at 80% 50%); 
+    overflow: hidden;
+    /* box-shadow: 5px 5px 19px #00bfff; */
+    transform: scale(0.9); /* Slightly shrink for a popping effect */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+
+nav #hover-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1; 
+    transform: scale(1);
+}
+  
+
+footer {
+  background: linear-gradient(to top, rgb(1, 1, 67) 30%, black 80%);
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-title {
+  font-size: 2rem;
+  align-items: flex-start;
+  margin: 0;
+  color: #00bfff;
+  text-transform: uppercase;
+}
+
+.footer-contact {
+  align-items: flex-end;
+  font-size: 16px;
+  margin-left: 140vh;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+}
